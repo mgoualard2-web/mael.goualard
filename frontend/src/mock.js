@@ -115,7 +115,9 @@ export const experiences = [
     role: "Conseiller Municipal Jeune",
     company: "Mairie de Revel",
     description: "Engagement citoyen au service d'un projet collaboratif pour un meilleur vivre-ensemble. Diagnostic auprès des usagers, communication intergénérationnelle et développement d'une créativité orientée intérêt général.",
-    tags: ["Engagement", "Communication", "Initiative"]
+    tags: ["Engagement", "Communication", "Initiative"],
+    photo: "https://customer-assets.emergentagent.com/job_work-gallery-294/artifacts/648f6g70_image.png",
+    photoCaption: "Avec l'équipe du CMJ pendant mon mandat"
   }
 ];
 
@@ -128,11 +130,11 @@ export const passions = [
   {
     title: "La Finance",
     description: "Marchés, investissements et stratégies économiques : je gère un PEA et quelques positions crypto pour aiguiser mon analyse et ma vision commerciale.",
-    image: "https://images.unsplash.com/photo-1716279083176-60af7a63cb03?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHw0fHxmaW5hbmNlJTIwdHJhZGluZ3xlbnwwfHx8fDE3Nzc5MjE5NTR8MA&ixlib=rb-4.1.0&q=85"
+    image: "https://customer-assets.emergentagent.com/job_work-gallery-294/artifacts/63pfoga7_image.png"
   },
   {
     title: "Le Cinéma",
-    description: "Une passion pour les histoires bien racontées, la mise en scène et tout ce que l'image peut transmettre.",
+    description: "Studio Ghibli, comédie/drame, thriller/crime — j'aime les œuvres qui poussent l'imagination et bousculent les émotions.",
     image: "https://images.unsplash.com/photo-1561722798-9a732d141027?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHw0fHxjaW5lbWElMjB0aGVhdGVyfGVufDB8fHx8MTc3NzkyMTk1M3ww&ixlib=rb-4.1.0&q=85"
   },
   {
