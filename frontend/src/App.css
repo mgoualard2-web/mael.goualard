@@ -1,0 +1,5 @@
+/* App-level styles. Avoid centering the container per global guideline. */
+.App {
+  min-height: 100vh;
+  background-color: #FAF7F2;
+}
