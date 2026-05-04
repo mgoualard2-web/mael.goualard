@@ -34,9 +34,14 @@ const Skills = () => {
           </div>
           <div className="lg:col-span-5 reveal">
             <p className="text-[#0F1B2D]/65 text-base lg:text-lg leading-relaxed">
-              Une formation rigoureuse, des expériences de terrain et une
-              passion sincère pour la relation humaine. Voici les compétences
-              que je développe au quotidien.
+              Ma formation mêle théorie et pratique pour un apprentissage
+              enrichissant. Voici les soft et hard skills que je développe au
+              quotidien.
+            </p>
+            <p className="text-[#0F1B2D]/65 text-base lg:text-lg leading-relaxed mt-4">
+              Ce cursus m'a aidé à lier outils techniques et contact humain
+              pour transformer mes cours en expériences concrètes sur le
+              terrain.
             </p>
           </div>
         </div>

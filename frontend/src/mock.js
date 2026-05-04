@@ -15,7 +15,7 @@ export const profile = {
   tagline: "Du contact humain à la conclusion — passionné par la vente, la stratégie et la relation client.",
   bio: [
     "Étudiant en BUT Techniques de Commercialisation à l'IUT de Castres, je me prépare avec rigueur et enthousiasme à devenir commercial. La rencontre, l'écoute et la négociation font partie de mon ADN.",
-    "Curieux et déterminé, j'aime transformer une simple discussion en opportunité concrète. Mon objectif : allier sens de l'humain et performance pour bâtir des relations clients durables."
+    "Curieux, déterminé et doté d'une grande aisance sociale, j'aime transformer une simple discussion en opportunité concrète. Conscient que chaque expérience est bonne à prendre pour forger mon expertise, je m'investis avec éthique et travail pour comprendre réellement chaque client. Mon objectif : allier sens de l'humain et performance pour bâtir des relations durables."
   ],
   education: [
     {
