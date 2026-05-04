@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Mail, Phone, MapPin, Linkedin, Send, ArrowUpRight, Download } from "lucide-react";
 import { profile } from "../../mock";
 import { Button } from "../ui/button";
@@ -7,6 +8,9 @@ import { Textarea } from "../ui/textarea";
 import { Label } from "../ui/label";
 import { useToast } from "../../hooks/use-toast";
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
+
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -14,7 +18,7 @@ const Contact = () => {
 
   const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       toast({
@@ -24,18 +28,28 @@ const Contact = () => {
       return;
     }
     setSending(true);
-    // Frontend-only: persist locally as a teaser for full-stack flow
-    const stored = JSON.parse(localStorage.getItem("mg_messages") || "[]");
-    stored.push({ ...form, date: new Date().toISOString() });
-    localStorage.setItem("mg_messages", JSON.stringify(stored));
-    setTimeout(() => {
-      setSending(false);
+    try {
+      await axios.post(`${API}/contact`, form, {
+        headers: { "Content-Type": "application/json" },
+        timeout: 15000,
+      });
       toast({
         title: "Message envoyé",
-        description: "Merci ! Je reviens vers vous très rapidement.",
+        description: "Merci ! Mael reviendra vers vous très rapidement.",
       });
       setForm({ name: "", email: "", subject: "", message: "" });
-    }, 700);
+    } catch (err) {
+      const detail =
+        err?.response?.data?.detail?.[0]?.msg ||
+        err?.response?.data?.detail ||
+        "Une erreur est survenue. Réessayez dans un instant.";
+      toast({
+        title: "Envoi impossible",
+        description: typeof detail === "string" ? detail : "Vérifiez vos champs et réessayez.",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   const channels = [
