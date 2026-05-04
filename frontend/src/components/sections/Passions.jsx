@@ -34,6 +34,12 @@ const Passions = () => {
                 src={p.image}
                 alt={p.title}
                 className="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                style={{
+                  objectPosition: p.objectPosition || "center",
+                  filter: p.boostQuality
+                    ? "contrast(1.12) saturate(1.18) brightness(1.04)"
+                    : undefined
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F1B2D] via-[#0F1B2D]/50 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 text-[#FAF7F2]">

@@ -116,7 +116,7 @@ export const passions = [
   },
   {
     title: "La Finance",
-    description: "Marchés, investissements et stratégies économiques : un univers qui aiguise mon analyse et nourrit ma vision commerciale.",
+    description: "Marchés, investissements et stratégies économiques : je gère un PEA et quelques positions crypto pour aiguiser mon analyse et ma vision commerciale.",
     image: "https://images.unsplash.com/photo-1716279083176-60af7a63cb03?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHw0fHxmaW5hbmNlJTIwdHJhZGluZ3xlbnwwfHx8fDE3Nzc5MjE5NTR8MA&ixlib=rb-4.1.0&q=85"
   },
   {
@@ -126,8 +126,10 @@ export const passions = [
   },
   {
     title: "Le Sport",
-    description: "Dépassement de soi, discipline et esprit d'équipe : le sport est mon moteur quotidien d'énergie et de rigueur.",
-    image: "https://images.unsplash.com/photo-1744868646521-2620c945a1fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBydW5uaW5nfGVufDB8fHx8MTc3NzkyMTk1M3ww&ixlib=rb-4.1.0&q=85"
+    description: "Footballeur depuis l'enfance : dépassement de soi, discipline et esprit d'équipe — mon moteur quotidien d'énergie et de rigueur.",
+    image: "https://customer-assets.emergentagent.com/job_work-gallery-294/artifacts/gogs9gv9_1000002189.JPG",
+    objectPosition: "62% center",
+    boostQuality: true
   },
   {
     title: "Engagement Associatif",
