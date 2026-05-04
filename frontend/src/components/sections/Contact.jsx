@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Linkedin, Send, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Send, ArrowUpRight, Download } from "lucide-react";
 import { profile } from "../../mock";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -63,6 +63,15 @@ const Contact = () => {
             Stage, alternance, projet étudiant ou simple échange ? J'ai hâte de
             vous lire.
           </p>
+
+          <Button
+            asChild
+            className="mt-8 bg-[#C8862B] hover:bg-[#E8A95C] text-[#0F1B2D] rounded-full h-12 px-7 font-medium transition-colors"
+          >
+            <a href={profile.cvUrl} target="_blank" rel="noreferrer" download>
+              <Download className="w-4 h-4 mr-2" /> Télécharger mon CV
+            </a>
+          </Button>
 
           <div className="mt-10 space-y-4">
             {channels.map((c) => (

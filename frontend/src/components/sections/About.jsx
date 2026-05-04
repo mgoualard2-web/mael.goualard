@@ -1,6 +1,6 @@
 import React from "react";
-import { profile } from "../../mock";
-import { Quote } from "lucide-react";
+import { profile, languages } from "../../mock";
+import { Quote, GraduationCap, Languages as LanguagesIcon } from "lucide-react";
 
 const About = () => {
   return (
@@ -59,6 +59,64 @@ const About = () => {
                 </span>
               )
             )}
+          </div>
+        </div>
+      </div>
+
+      {/* Formation + Langues */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-20 lg:mt-28 grid lg:grid-cols-12 gap-10">
+        <div className="lg:col-span-7 reveal">
+          <div className="flex items-center gap-3 mb-6">
+            <GraduationCap className="w-5 h-5 text-[#C8862B]" />
+            <span className="text-[11px] uppercase tracking-[0.25em] text-[#C8862B]">
+              Formation
+            </span>
+          </div>
+          <div className="space-y-4">
+            {profile.education.map((ed) => (
+              <div
+                key={ed.title}
+                className="border border-white/10 rounded-2xl p-6 hover:border-[#C8862B] transition-colors bg-white/5"
+              >
+                <div className="text-[11px] uppercase tracking-[0.2em] text-[#C8862B] font-medium mb-2">
+                  {ed.period}
+                </div>
+                <h3 className="font-display text-xl lg:text-2xl font-semibold leading-tight">
+                  {ed.title}
+                </h3>
+                <div className="text-sm text-[#FAF7F2]/65 mt-1 mb-3">{ed.place}</div>
+                <p className="text-sm text-[#FAF7F2]/75 leading-relaxed">
+                  {ed.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="lg:col-span-5 reveal">
+          <div className="flex items-center gap-3 mb-6">
+            <LanguagesIcon className="w-5 h-5 text-[#C8862B]" />
+            <span className="text-[11px] uppercase tracking-[0.25em] text-[#C8862B]">
+              Langues
+            </span>
+          </div>
+          <div className="space-y-3">
+            {languages.map((lang) => (
+              <div
+                key={lang.name}
+                className="group flex items-center gap-5 border border-white/10 rounded-2xl p-5 hover:border-[#C8862B] transition-colors bg-white/5"
+              >
+                <div className="w-12 h-12 rounded-xl bg-[#C8862B] text-[#0F1B2D] grid place-items-center font-display font-bold text-sm">
+                  {lang.code}
+                </div>
+                <div className="flex-1">
+                  <div className="font-display text-lg font-semibold leading-tight">
+                    {lang.name}
+                  </div>
+                  <div className="text-xs text-[#FAF7F2]/65 mt-0.5">{lang.level}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

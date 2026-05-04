@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowDown, MapPin, Sparkles } from "lucide-react";
+import { ArrowDown, MapPin, Sparkles, Download } from "lucide-react";
 import { Button } from "../ui/button";
 import { profile, stats } from "../../mock";
 
@@ -49,8 +49,8 @@ const Hero = () => {
               variant="outline"
               className="rounded-full h-12 px-7 text-sm border-[#0F1B2D]/20 text-[#0F1B2D] hover:bg-[#0F1B2D] hover:text-[#FAF7F2] hover:border-[#0F1B2D] transition-colors"
             >
-              <a href="#contact">
-                <span>Prendre contact</span>
+              <a href={profile.cvUrl} target="_blank" rel="noreferrer" download>
+                <Download className="w-4 h-4 mr-2" /> Télécharger mon CV
               </a>
             </Button>
           </div>

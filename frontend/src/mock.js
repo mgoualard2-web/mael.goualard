@@ -6,14 +6,30 @@ export const profile = {
   role: "Étudiant en Techniques de Commercialisation",
   ambition: "Futur Commercial",
   city: "Sorèze (81540), France",
+  address: "55 rue Pierre Paul Riquet, Sorèze",
   email: "mael.goualard@etu.iut-tlse3.fr",
   phone: "06 58 98 15 05",
   linkedin: "linkedin.com/in/mael-goualard-8881023a3",
   linkedinUrl: "https://www.linkedin.com/in/mael-goualard-8881023a3/",
+  cvUrl: "https://customer-assets.emergentagent.com/job_work-gallery-294/artifacts/l27ja5c7_Minimalist%20CV%20Resume-6.pdf",
   tagline: "Du contact humain à la conclusion — passionné par la vente, la stratégie et la relation client.",
   bio: [
-    "Étudiant en BUT Techniques de Commercialisation à Castres, je me prépare avec rigueur et enthousiasme à devenir commercial. La rencontre, l'écoute et la négociation font partie de mon ADN.",
+    "Étudiant en BUT Techniques de Commercialisation à l'IUT de Castres, je me prépare avec rigueur et enthousiasme à devenir commercial. La rencontre, l'écoute et la négociation font partie de mon ADN.",
     "Curieux et déterminé, j'aime transformer une simple discussion en opportunité concrète. Mon objectif : allier sens de l'humain et performance pour bâtir des relations clients durables."
+  ],
+  education: [
+    {
+      period: "2025 — Aujourd'hui",
+      title: "BUT Techniques de Commercialisation",
+      place: "IUT de Castres",
+      detail: "Études supérieures en commerce, marketing, négociation et gestion."
+    },
+    {
+      period: "2022 — 2025",
+      title: "Baccalauréat Général — Mention Bien",
+      place: "Lycée Vincent Auriol — Revel",
+      detail: "Spécialités : Sciences économiques et sociales · Histoire-géographie, géopolitique et sciences politiques. Option éloquence (club d'art oratoire) 2021–2023."
+    }
   ],
   images: {
     hero: "https://images.unsplash.com/photo-1688167217076-190b0ec8428f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0dWRlbnQlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzc5MjEyMjR8MA&ixlib=rb-4.1.0&q=85",
@@ -62,34 +78,33 @@ export const skills = [
   }
 ];
 
+export const languages = [
+  { name: "Français", level: "Langue maternelle", code: "FR" },
+  { name: "Anglais", level: "B2 — Indépendant avancé", code: "EN" },
+  { name: "Espagnol", level: "B2 — Indépendant avancé", code: "ES" }
+];
+
 export const experiences = [
   {
-    period: "2024 — Aujourd'hui",
-    role: "BUT Techniques de Commercialisation",
-    company: "IUT de Castres",
-    description: "Formation approfondie en vente, marketing, négociation, droit commercial et gestion. Projets tutorés en partenariat avec des entreprises locales.",
-    tags: ["Vente", "Marketing", "Négociation"]
+    period: "Févr. 2026 — Mars 2026",
+    role: "Stage — Vendeur Polyvalent",
+    company: "Centrakor · Revel",
+    description: "Développement de l'esprit de vendeur, facing des rayons, balisage des prix, prise en gestion du stock et tenue de la caisse. Première immersion en environnement retail.",
+    tags: ["Vente", "Merchandising", "Caisse", "Stock"]
   },
   {
-    period: "Été 2024",
-    role: "Vendeur Polyvalent (Stage)",
-    company: "Enseigne locale — Castres",
-    description: "Accueil clientèle, conseil produit, mise en rayon et encaissement. Première expérience concrète du contact client en magasin.",
-    tags: ["Conseil", "Vente", "Terrain"]
+    period: "Juin 2022 — Juillet 2022",
+    role: "Écimage du maïs",
+    company: "Sanègre · Villefranche-de-Lauragais",
+    description: "Travail saisonnier en plein air. Développement des capacités physiques et du rapport à l'effort, collaboration en équipe pour un travail précis et adaptation au rythme imposé par les tâches.",
+    tags: ["Terrain", "Équipe", "Endurance"]
   },
   {
-    period: "2023 — 2024",
-    role: "Baccalauréat Général",
-    company: "Lycée — Castres",
-    description: "Spécialités orientées sciences économiques et sociales. Mention obtenue avec engagement associatif au sein du BDE.",
-    tags: ["SES", "BDE", "Mention"]
-  },
-  {
-    period: "2022 — 2023",
-    role: "Job Étudiant Saisonnier",
-    company: "Restauration — Tarn",
-    description: "Service en salle, gestion de la relation client en environnement rapide. Apprentissage du sens du service et du travail sous pression.",
-    tags: ["Service", "Équipe"]
+    period: "Oct. 2017 — Oct. 2020",
+    role: "Conseiller Municipal Jeune",
+    company: "Mairie de Revel",
+    description: "Engagement citoyen au service d'un projet collaboratif pour un meilleur vivre-ensemble. Diagnostic auprès des usagers, communication intergénérationnelle et développement d'une créativité orientée intérêt général.",
+    tags: ["Engagement", "Communication", "Initiative"]
   }
 ];
 
@@ -113,6 +128,11 @@ export const passions = [
     title: "Le Sport",
     description: "Dépassement de soi, discipline et esprit d'équipe : le sport est mon moteur quotidien d'énergie et de rigueur.",
     image: "https://images.unsplash.com/photo-1744868646521-2620c945a1fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBydW5uaW5nfGVufDB8fHx8MTc3NzkyMTk1M3ww&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    title: "Engagement Associatif",
+    description: "Conseiller municipal jeune et impliqué dans la vie collective : croire au pouvoir du lien social et de l'action collective.",
+    image: "https://images.unsplash.com/photo-1527525443983-6e60c75fff46?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHw0fHx0ZWFtd29yayUyMGhhbmRzfGVufDB8fHx8MTc3NzkyMjc1M3ww&ixlib=rb-4.1.0&q=85"
   }
 ];
 
