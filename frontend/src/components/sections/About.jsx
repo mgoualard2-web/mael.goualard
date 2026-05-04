@@ -1,6 +1,6 @@
 import React from "react";
 import { profile, languages } from "../../mock";
-import { Quote, GraduationCap, Languages as LanguagesIcon } from "lucide-react";
+import { Quote, GraduationCap, Languages as LanguagesIcon, FileText, ArrowUpRight } from "lucide-react";
 
 const About = () => {
   return (
@@ -89,6 +89,28 @@ const About = () => {
                 <p className="text-sm text-[#FAF7F2]/75 leading-relaxed">
                   {ed.detail}
                 </p>
+
+                {ed.attachment && (
+                  <a
+                    href={ed.attachment.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group mt-5 flex items-center gap-3 p-3 rounded-xl bg-[#C8862B]/10 border border-[#C8862B]/30 hover:bg-[#C8862B]/20 hover:border-[#C8862B] transition-all"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-[#C8862B] text-[#0F1B2D] grid place-items-center flex-shrink-0">
+                      <FileText className="w-4 h-4" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-medium text-[#FAF7F2] truncate">
+                        {ed.attachment.label}
+                      </div>
+                      <div className="text-[11px] text-[#FAF7F2]/60 mt-0.5">
+                        {ed.attachment.sub}
+                      </div>
+                    </div>
+                    <ArrowUpRight className="w-4 h-4 text-[#C8862B] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform flex-shrink-0" />
+                  </a>
+                )}
               </div>
             ))}
           </div>

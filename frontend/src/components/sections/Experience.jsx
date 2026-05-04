@@ -1,6 +1,6 @@
 import React from "react";
 import { experiences } from "../../mock";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Quote } from "lucide-react";
 
 const Experience = () => {
   return (
@@ -59,31 +59,66 @@ const Experience = () => {
 
 const ExperienceCard = ({ exp, alignRight = false }) => (
   <div
-    className={`group bg-[#FAF7F2] border border-[#0F1B2D]/10 rounded-2xl p-7 hover:border-[#C8862B] hover:shadow-lg transition-all ${
+    className={`group bg-[#FAF7F2] border border-[#0F1B2D]/10 rounded-2xl overflow-hidden hover:border-[#C8862B] hover:shadow-lg transition-all ${
       alignRight ? "lg:ml-auto" : ""
     }`}
     style={{ maxWidth: "560px" }}
   >
-    <div className={`flex items-center gap-3 mb-3 ${alignRight ? "lg:justify-end" : ""}`}>
-      <span className="text-xs uppercase tracking-[0.2em] text-[#C8862B] font-medium">
-        {exp.period}
-      </span>
-      <Briefcase className="w-3.5 h-3.5 text-[#C8862B]" />
-    </div>
-    <h3 className="font-display text-xl lg:text-2xl font-semibold text-[#0F1B2D] mb-1">
-      {exp.role}
-    </h3>
-    <div className="text-sm font-medium text-[#0F1B2D]/65 mb-4">{exp.company}</div>
-    <p className="text-sm text-[#0F1B2D]/70 leading-relaxed mb-5">{exp.description}</p>
-    <div className={`flex flex-wrap gap-2 ${alignRight ? "lg:justify-end" : ""}`}>
-      {exp.tags.map((tag) => (
-        <span
-          key={tag}
-          className="text-[11px] uppercase tracking-wider px-3 py-1 rounded-full bg-[#0F1B2D]/5 text-[#0F1B2D]/70"
-        >
-          {tag}
+    {exp.photo && (
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#0F1B2D]/5">
+        <img
+          src={exp.photo}
+          alt={exp.photoCaption || exp.role}
+          className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        {exp.photoCaption && (
+          <div className="absolute bottom-3 left-3 right-3">
+            <span className="inline-block bg-[#0F1B2D]/85 backdrop-blur-sm text-[#FAF7F2] text-[11px] uppercase tracking-[0.18em] px-3 py-1.5 rounded-full">
+              {exp.photoCaption}
+            </span>
+          </div>
+        )}
+      </div>
+    )}
+    <div className="p-7">
+      <div className={`flex items-center gap-3 mb-3 ${alignRight ? "lg:justify-end" : ""}`}>
+        <span className="text-xs uppercase tracking-[0.2em] text-[#C8862B] font-medium">
+          {exp.period}
         </span>
-      ))}
+        <Briefcase className="w-3.5 h-3.5 text-[#C8862B]" />
+      </div>
+      <h3 className="font-display text-xl lg:text-2xl font-semibold text-[#0F1B2D] mb-1">
+        {exp.role}
+      </h3>
+      <div className="text-sm font-medium text-[#0F1B2D]/65 mb-4">{exp.company}</div>
+      <p className="text-sm text-[#0F1B2D]/70 leading-relaxed mb-5">{exp.description}</p>
+
+      {exp.appreciation && (
+        <div className="mb-5 border-l-2 border-[#C8862B] pl-4 py-2 bg-[#C8862B]/5 rounded-r-lg">
+          <div className="flex items-start gap-2">
+            <Quote className="w-3.5 h-3.5 text-[#C8862B] flex-shrink-0 mt-1" />
+            <div>
+              <p className="font-display italic text-sm lg:text-base text-[#0F1B2D] leading-relaxed">
+                « {exp.appreciation.text} »
+              </p>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-[#0F1B2D]/55 mt-2">
+                — {exp.appreciation.source}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className={`flex flex-wrap gap-2 ${alignRight ? "lg:justify-end" : ""}`}>
+        {exp.tags.map((tag) => (
+          <span
+            key={tag}
+            className="text-[11px] uppercase tracking-wider px-3 py-1 rounded-full bg-[#0F1B2D]/5 text-[#0F1B2D]/70"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
     </div>
   </div>
 );

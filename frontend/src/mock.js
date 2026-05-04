@@ -22,7 +22,12 @@ export const profile = {
       period: "2025 — Aujourd'hui",
       title: "BUT Techniques de Commercialisation",
       place: "IUT de Castres",
-      detail: "Études supérieures en commerce, marketing, négociation et gestion."
+      detail: "Études supérieures en commerce, marketing, négociation et gestion.",
+      attachment: {
+        label: "Identité culturelle — Une biographie classique",
+        sub: "Travail académique · TC1A",
+        url: "https://customer-assets.emergentagent.com/job_work-gallery-294/artifacts/e0nwqfc1_Identit%C3%A9%20culturelle%20Mael%20goualatd%20TC1A.pdf"
+      }
     },
     {
       period: "2022 — 2025",
@@ -90,7 +95,13 @@ export const experiences = [
     role: "Stage — Vendeur Polyvalent",
     company: "Centrakor · Revel",
     description: "Développement de l'esprit de vendeur, facing des rayons, balisage des prix, prise en gestion du stock et tenue de la caisse. Première immersion en environnement retail.",
-    tags: ["Vente", "Merchandising", "Caisse", "Stock"]
+    tags: ["Vente", "Merchandising", "Caisse", "Stock"],
+    photo: "https://customer-assets.emergentagent.com/job_work-gallery-294/artifacts/tltgr2n1_IMG_3894%282%29.jpeg",
+    photoCaption: "Rayon que j'ai agencé en autonomie",
+    appreciation: {
+      text: "Investi dans son travail · bonne intégration avec l'équipe · souriant et curieux.",
+      source: "Appréciation du tuteur de stage"
+    }
   },
   {
     period: "Juin 2022 — Juillet 2022",
