@@ -32,8 +32,8 @@ export const profile = {
     }
   ],
   images: {
-    hero: "https://images.unsplash.com/photo-1688167217076-190b0ec8428f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0dWRlbnQlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzc5MjEyMjR8MA&ixlib=rb-4.1.0&q=85",
-    about: "https://images.unsplash.com/photo-1604177091072-b7b677a077f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwzfHxzdHVkZW50JTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc3NzkyMTIyNHww&ixlib=rb-4.1.0&q=85",
+    hero: "https://customer-assets.emergentagent.com/job_work-gallery-294/artifacts/af109htj_IMG_3408%281%29.jpg",
+    about: "https://customer-assets.emergentagent.com/job_work-gallery-294/artifacts/nkxoaaww_5e1e606d-fec9-4744-9632-e0217db2a8db%281%29.jpg",
     backdrop: "https://images.unsplash.com/photo-1612966809481-b84cb86ee3f3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGJhY2tkcm9wfGVufDB8fHx8MTc3NzkyMTIzMHww&ixlib=rb-4.1.0&q=85"
   }
 };
@@ -112,7 +112,7 @@ export const passions = [
   {
     title: "La Montagne",
     description: "Randonnées, paysages d'altitude et grand air : la montagne m'apprend la patience, l'effort et l'humilité face à la nature.",
-    image: "https://images.unsplash.com/photo-1604223190546-a43e4c7f29d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3Nzc5MjE5NTN8MA&ixlib=rb-4.1.0&q=85"
+    image: "https://customer-assets.emergentagent.com/job_work-gallery-294/artifacts/nkxoaaww_5e1e606d-fec9-4744-9632-e0217db2a8db%281%29.jpg"
   },
   {
     title: "La Finance",

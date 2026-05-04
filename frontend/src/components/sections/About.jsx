@@ -10,8 +10,9 @@ const About = () => {
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-white/10">
             <img
               src={profile.images.about}
-              alt="Mael en action"
+              alt="Mael en pleine randonnée"
               className="h-full w-full object-cover"
+              style={{ filter: "contrast(1.04) saturate(1.06)" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0F1B2D]/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">

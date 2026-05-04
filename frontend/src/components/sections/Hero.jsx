@@ -79,6 +79,7 @@ const Hero = () => {
                 src={profile.images.hero}
                 alt={`${profile.firstName} ${profile.lastName}`}
                 className="h-full w-full object-cover"
+                style={{ objectPosition: "30% center", filter: "contrast(1.05) saturate(1.08)" }}
               />
             </div>
             {/* Floating tag */}
