@@ -198,7 +198,7 @@ backend:
 frontend:
   - task: "Contact form wired to POST /api/contact"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/sections/Contact.jsx"
     stuck_count: 0
     priority: "high"
@@ -208,19 +208,135 @@ frontend:
           agent: "main"
           comment: |
             Replaced localStorage mock with axios.post(${REACT_APP_BACKEND_URL}/api/contact, form).
-            Toast shown on success/failure. Frontend testing not required by user yet — will ask before invoking.
+            Toast shown on success/failure. Ready for E2E testing.
+        - working: true
+          agent: "testing"
+          comment: |
+            ✅ CONTACT FORM E2E TESTS PASSED (7/7):
+            - Happy path: Form submission successful, success toast "Message envoyé" appears, fields cleared after submission
+            - Validation (empty name): "Champs manquants" toast shown correctly
+            - Validation (empty message): "Champs manquants" toast shown correctly
+            - Invalid email: HTML5 validation catches invalid emails at browser level (good UX), backend 422 validation confirmed in logs
+            - Contact channels: All 4 channels verified (E-mail, Téléphone, LinkedIn, Localisation) with correct values
+            - CV download button in Contact section: PDF link with target="_blank" verified
+            - Form error handling code is correct (shows "Envoi impossible" toast on backend errors)
+
+  - task: "Header navigation + smooth scroll anchors"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/sections/Header.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Sticky header with anchor links: Moi, Compétences, Expérience, Passions, Contact + 'Me contacter' CTA."
+        - working: true
+          agent: "testing"
+          comment: |
+            ✅ HEADER NAVIGATION TESTS PASSED (6/6):
+            - All 5 navigation links work correctly (Moi, Compétences, Expérience, Passions, Contact)
+            - Each link smooth-scrolls to the corresponding section
+            - "Me contacter" CTA button scrolls to #contact section
+            - Mobile menu: Hamburger icon opens/closes menu correctly on 375px viewport
+            - Sticky header behavior working (changes background on scroll)
+
+  - task: "Hero section with CV download button"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/sections/Hero.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Hero shows real photo (with Bac diploma), CTA buttons (Découvrir / Télécharger CV), stats."
+        - working: true
+          agent: "testing"
+          comment: |
+            ✅ HERO SECTION TESTS PASSED (5/5):
+            - Name "Mael Goualard" displayed correctly in hero heading
+            - Tagline visible: "Du contact humain à la conclusion — passionné par la vente, la stratégie et la relation client."
+            - Hero image loads correctly (Bac diploma photo)
+            - CV download button links to PDF (customer-assets.emergentagent.com) with target="_blank"
+            - Stats section displays: 2025, BUT TC, Castres, 100%
+            - "Découvrir mon profil" button scrolls to #about section
+
+  - task: "Skills section with 5 skill cards"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/sections/Skills.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: |
+            ✅ SKILLS SECTION TESTS PASSED:
+            - All 5 skill cards present: Négociation Commerciale, Relation Client, Prospection, Communication, Esprit d'Équipe
+            - Each skill shows "Maîtrise 35%" with progress bar
+            - Hover effects working (card border changes to amber)
+
+  - task: "Experience timeline with 3 experiences"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/sections/Experience.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: |
+            ✅ EXPERIENCE TIMELINE TESTS PASSED:
+            - All 3 experiences present: Centrakor (Févr.–Mars 2026), Écimage du maïs (2022), CMJ (2017–2020)
+            - Centrakor: Shelf photo visible, appreciation quote "Investi dans son travail..." displayed
+            - CMJ: Group photo visible
+            - Timeline layout working correctly (alternating left/right on desktop)
+
+  - task: "Passions section with 5 passion cards"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/sections/Passions.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: |
+            ✅ PASSIONS SECTION TESTS PASSED:
+            - All 5 passion cards present: La Montagne, La Finance, Le Cinéma, Le Sport, Engagement Associatif
+            - Hover effect working: Description text appears on hover with smooth transition
+            - Images loading correctly for all passion cards
+
+  - task: "Footer with navigation and back-to-top link"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/sections/Footer.jsx"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: |
+            ✅ FOOTER TESTS PASSED:
+            - Footer displays "Mael Goualard." with bio text
+            - Navigation links present (6 links total)
+            - "Retour en haut" link present and functional
 
 metadata:
   created_by: "main_agent"
   version: "1.0"
-  test_sequence: 2
+  test_sequence: 3
   run_ui: false
 
 test_plan:
-  current_focus:
-    - "POST /api/contact — create message + persist + email notification via FormSubmit"
-    - "GET /api/contact — list last 100 messages (newest first)"
-    - "GET /api/ — root health check (existing route preserved)"
+  current_focus: []
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -276,3 +392,80 @@ agent_communication:
         - Best-effort behavior confirmed: API returns 200 even if FormSubmit fails
         
         NO ISSUES FOUND. Backend is production-ready.
+    
+    - agent: "testing"
+      message: |
+        🎉 FRONTEND E2E TESTING COMPLETE - ALL TESTS PASSED (12/12)
+        
+        Executed comprehensive end-to-end tests on the portfolio website using Playwright.
+        URL tested: https://work-gallery-294.preview.emergentagent.com
+        
+        ✅ ALL 12 TEST SCENARIOS PASSED:
+        
+        1. Page Load & Hero Section ✓
+           - No console errors on page load
+           - Hero section visible with name "Mael Goualard."
+           - Tagline displayed correctly
+           - Hero image loads successfully
+        
+        2. Header Navigation ✓
+           - All 5 menu links work (Moi, Compétences, Expérience, Passions, Contact)
+           - Smooth scroll to corresponding sections verified
+           - "Me contacter" CTA button scrolls to #contact
+        
+        3. CV Download Buttons ✓
+           - Hero section CV button: PDF link with target="_blank"
+           - Contact section CV button: PDF link with target="_blank"
+           - Both link to customer-assets.emergentagent.com/*.pdf
+        
+        4. Skills Section ✓
+           - 5 skill cards visible (Négociation, Relation Client, Prospection, Communication, Esprit d'Équipe)
+           - Each shows "Maîtrise 35%" with progress bar
+        
+        5. Experience Timeline ✓
+           - 3 experiences visible: Centrakor (Févr.–Mars 2026), Écimage du maïs (2022), CMJ (2017–2020)
+           - Centrakor card has shelf photo and appreciation quote
+           - CMJ card has group photo
+        
+        6. Passions Section ✓
+           - 5 passion cards visible (La Montagne, La Finance, Le Cinéma, Le Sport, Engagement Associatif)
+           - Hover effect working: description text appears on hover
+        
+        7. Contact Form - Happy Path (CRITICAL) ✓
+           - Form submission successful with test data
+           - Success toast "Message envoyé" appears
+           - Form fields cleared after submission
+           - No console errors
+           - Backend confirmed message saved to MongoDB
+        
+        8. Contact Form - Validation ✓
+           - Empty name: "Champs manquants" toast shown, form NOT submitted
+           - Empty message: "Champs manquants" toast shown, form NOT submitted
+        
+        9. Contact Form - Invalid Email ✓
+           - HTML5 validation catches invalid emails at browser level (good UX)
+           - Backend 422 validation confirmed in logs for emails that bypass HTML5
+           - Error handling code correct ("Envoi impossible" toast)
+        
+        10. Contact Links ✓
+            - E-mail: mael.goualard@etu.iut-tlse3.fr ✓
+            - Téléphone: 06 58 98 15 05 ✓
+            - LinkedIn: linkedin.com/in/mael-goualard-8881023a3 ✓
+            - Localisation: Sorèze (81540), France ✓
+        
+        11. Footer ✓
+            - "Mael Goualard." footer with bio text
+            - Navigation links present
+            - "Retour en haut" link present
+        
+        12. Responsive - Mobile Menu ✓
+            - Hamburger icon visible at 375px width
+            - Mobile menu opens/closes correctly
+        
+        SUMMARY:
+        - All frontend features working correctly
+        - Backend integration successful (contact form → API → MongoDB → FormSubmit)
+        - No critical issues found
+        - Portfolio website is production-ready
+        
+        Screenshots saved in .screenshots/ directory for visual verification.
