@@ -5,10 +5,11 @@ export const profile = {
   lastName: "Goualard",
   role: "Étudiant en Techniques de Commercialisation",
   ambition: "Futur Commercial",
-  city: "Castres, France",
-  email: "mael.goualard@exemple.fr",
-  phone: "+33 6 00 00 00 00",
-  linkedin: "linkedin.com/in/maelgoualard",
+  city: "Sorèze (81540), France",
+  email: "mael.goualard@etu.iut-tlse3.fr",
+  phone: "06 58 98 15 05",
+  linkedin: "linkedin.com/in/mael-goualard-8881023a3",
+  linkedinUrl: "https://www.linkedin.com/in/mael-goualard-8881023a3/",
   tagline: "Du contact humain à la conclusion — passionné par la vente, la stratégie et la relation client.",
   bio: [
     "Étudiant en BUT Techniques de Commercialisation à Castres, je me prépare avec rigueur et enthousiasme à devenir commercial. La rencontre, l'écoute et la négociation font partie de mon ADN.",
@@ -33,37 +34,31 @@ export const skills = [
     title: "Négociation Commerciale",
     description: "Identifier les besoins, argumenter avec finesse et conclure avec impact.",
     icon: "Handshake",
-    level: 85
+    level: 35
   },
   {
     title: "Relation Client",
     description: "Écoute active, fidélisation et accompagnement personnalisé sur le long terme.",
     icon: "Users",
-    level: 90
+    level: 35
   },
   {
     title: "Prospection",
     description: "Recherche d'opportunités, démarchage téléphonique et stratégies de conversion.",
     icon: "Target",
-    level: 80
-  },
-  {
-    title: "Marketing Digital",
-    description: "Connaissances des leviers SEO, réseaux sociaux et e-commerce.",
-    icon: "TrendingUp",
-    level: 75
+    level: 35
   },
   {
     title: "Communication",
     description: "Expression claire, présentation orale et adaptation à chaque interlocuteur.",
     icon: "MessageCircle",
-    level: 88
+    level: 35
   },
   {
     title: "Esprit d'Équipe",
     description: "Collaboration, leadership et gestion de projets en groupe pluridisciplinaire.",
     icon: "Users2",
-    level: 92
+    level: 35
   }
 ];
 
@@ -100,24 +95,24 @@ export const experiences = [
 
 export const passions = [
   {
-    title: "Sport & Football",
-    description: "Joueur passionné depuis l'enfance, le football m'apprend la discipline, la stratégie collective et le dépassement de soi.",
-    image: "https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHw0fHxmb290YmFsbCUyMHNwb3J0c3xlbnwwfHx8fDE3Nzc5MjEyMjR8MA&ixlib=rb-4.1.0&q=85"
+    title: "La Montagne",
+    description: "Randonnées, paysages d'altitude et grand air : la montagne m'apprend la patience, l'effort et l'humilité face à la nature.",
+    image: "https://images.unsplash.com/photo-1604223190546-a43e4c7f29d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3Nzc5MjE5NTN8MA&ixlib=rb-4.1.0&q=85"
   },
   {
-    title: "Voyages & Découverte",
-    description: "Explorer de nouveaux horizons, comprendre d'autres cultures et élargir ma vision du monde — un moteur essentiel.",
-    image: "https://images.unsplash.com/photo-1558632639-93c32f04d81b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwzfHx0cmF2ZWwlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzc3OTIxMjI0fDA&ixlib=rb-4.1.0&q=85"
+    title: "La Finance",
+    description: "Marchés, investissements et stratégies économiques : un univers qui aiguise mon analyse et nourrit ma vision commerciale.",
+    image: "https://images.unsplash.com/photo-1716279083176-60af7a63cb03?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHw0fHxmaW5hbmNlJTIwdHJhZGluZ3xlbnwwfHx8fDE3Nzc5MjE5NTR8MA&ixlib=rb-4.1.0&q=85"
   },
   {
-    title: "Musique & Guitare",
-    description: "Une parenthèse créative qui m'aide à canaliser l'énergie et à cultiver patience et persévérance.",
-    image: "https://images.unsplash.com/photo-1686895053267-eb5f22e59cde?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHw0fHxndWl0YXIlMjBtdXNpY3xlbnwwfHx8fDE3Nzc5MjEyMzB8MA&ixlib=rb-4.1.0&q=85"
+    title: "Le Cinéma",
+    description: "Une passion pour les histoires bien racontées, la mise en scène et tout ce que l'image peut transmettre.",
+    image: "https://images.unsplash.com/photo-1561722798-9a732d141027?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHw0fHxjaW5lbWElMjB0aGVhdGVyfGVufDB8fHx8MTc3NzkyMTk1M3ww&ixlib=rb-4.1.0&q=85"
   },
   {
-    title: "Road Trips & Aventures",
-    description: "Liberté, spontanéité et rencontres : prendre la route entre amis pour vivre des moments inoubliables.",
-    image: "https://images.unsplash.com/photo-1553123010-c26aab17130a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwyfHx0cmF2ZWwlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzc3OTIxMjI0fDA&ixlib=rb-4.1.0&q=85"
+    title: "Le Sport",
+    description: "Dépassement de soi, discipline et esprit d'équipe : le sport est mon moteur quotidien d'énergie et de rigueur.",
+    image: "https://images.unsplash.com/photo-1744868646521-2620c945a1fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBydW5uaW5nfGVufDB8fHx8MTc3NzkyMTk1M3ww&ixlib=rb-4.1.0&q=85"
   }
 ];
 

@@ -41,7 +41,7 @@ const Contact = () => {
   const channels = [
     { icon: Mail, label: "E-mail", value: profile.email, href: `mailto:${profile.email}` },
     { icon: Phone, label: "Téléphone", value: profile.phone, href: `tel:${profile.phone.replace(/\s/g, "")}` },
-    { icon: Linkedin, label: "LinkedIn", value: profile.linkedin, href: `https://${profile.linkedin}` },
+    { icon: Linkedin, label: "LinkedIn", value: profile.linkedin, href: profile.linkedinUrl },
     { icon: MapPin, label: "Localisation", value: profile.city, href: "#" },
   ];
 

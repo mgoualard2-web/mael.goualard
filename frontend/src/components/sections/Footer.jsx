@@ -46,7 +46,7 @@ const Footer = () => {
               {profile.email}
             </a>
             <a
-              href={`https://${profile.linkedin}`}
+              href={profile.linkedinUrl}
               target="_blank"
               rel="noreferrer"
               className="block text-sm text-[#0F1B2D]/75 hover:text-[#C8862B] transition-colors mt-1"
